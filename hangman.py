@@ -100,28 +100,6 @@ def head():
 
 #if user wins, backgroud changes and goes to restart code
 
-#code to restart game
-def tryAgain():
-  again=input("Would you like to start over? ")
-  if again.lower()== "yes":
-      hangBoard()
-  elif again.lower()== "no":
-      finish()
-  else:
-     comeAgain()
-
-#thanks user for playing
-def finish():
-  print("Thanks for playing")
-
-#has user chose again
-def comeAgain():
-  print("Please type YES or NO.")
-  tryAgain()
-
-def que():
-    print("Only use letters please.")
-    letter()
 
 hangBoard()
 tkinter.mainloop()
