@@ -12,14 +12,13 @@ hang = turtle.Turtle()
 hang.color("Medium Turquoise")
 hang.pensize(6)
 hang.shape("classic")
-box = turtle.Turtle()
-box.color("Medium Turquoise")
-box.pensize(6)
-box.shape("classic")
-
+hangs = turtle.Turtle()
+hangs.color("Medium Turquoise")
+hangs.pensize(6)
+hangs.shape("classic")
 
 #turtle info for board
-def hangBoard():
+def hangmanBoard():
     hang.hideturtle()
     hang.penup()
     hang.back(100)
@@ -34,33 +33,33 @@ def hangBoard():
     hang.forward(30)
 #code for body
 def head():
-   hang.right(90)
-   hang.circle(30)
-   hang.penup()
-   hang.left(90)
-   hang.forward(60)
+   hangs.right(90)
+   hangs.circle(30)
+   hangs.penup()
+   hangs.left(90)
+   hangs.forward(60)
 def body():
-   hang.pendown()
-   hang.forward(80)
-   hang.back(70)
+   hangs.pendown()
+   hangs.forward(80)
+   hangs.back(70)
 def leftarm():
-   hang.left(45)
-   hang.forward(50)
-   hang.back(50)
+   hangs.left(45)
+   hangs.forward(50)
+   hangs.back(50)
 def rightarm():
-   hang.right(90)
-   hang.forward(50)
-   hang.back(50)
+   hangs.right(90)
+   hangs.forward(50)
+   hangs.back(50)
 def leftleg():
-   hang.left(45)
-   hang.forward(70)
-   hang.left(45)
-   hang.forward(50)
-   hang.back(50)
+   hangs.left(45)
+   hangs.forward(70)
+   hangs.left(45)
+   hangs.forward(50)
+   hangs.back(50)
 def rightleg():
-   hang.right(90)
-   hang.forward(50)
-   hang.back(50)
+   hangs.right(90)
+   hangs.forward(50)
+   hangs.back(50)
 
 
 words = 'ant salmon zebra'.split()
@@ -165,6 +164,6 @@ while True:
             secretWord = getRandomWord(words)
         else:
             break
-hangBoard()
 
+hangmanBoard()
 tkinter.mainloop()
