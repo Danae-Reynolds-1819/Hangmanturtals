@@ -196,7 +196,6 @@ while True:
             secretWord = getRandomWord(words)
         else:
             break
->>>>>>> c48f3fa3b7270ab3a61013d8027d5fd169fca810
 hangBoard()
 boxMake()
 
