@@ -32,39 +32,8 @@ def hangBoard():
     hang.forward(100)
     hang.right(90)
     hang.forward(30)
-box.hideturtle()
-#makes the wrong letter box
-def boxMake():
- box.penup()
- box.left(90)
- box.forward(200)
- box.right(90)
- box.pendown()
- for thing in range(2):
-     box.forward(200)
-     box.right(90)
-     box.forward(100)
-     box.right(90)
- getRandomWord(words)
 #code for body
 def head():
-<<<<<<< HEAD
-    hang.right(90)
-    hang.circle(30)
-    hang.penup()
-    hang.left(90)
-    hang.forward(60)
-
-
-
-
-#if all strikes used then you lose
-
-
-#if user wins, backgroud changes and goes to restart code
-
-
-=======
    hang.right(90)
    hang.circle(30)
    hang.penup()
@@ -197,6 +166,5 @@ while True:
         else:
             break
 hangBoard()
-boxMake()
 
 tkinter.mainloop()
