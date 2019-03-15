@@ -1,7 +1,8 @@
+#Imports Libraries
 import random
 import turtle
 import tkinter
-
+import time
 
 #opens the screen
 window = turtle.Screen()
@@ -12,17 +13,16 @@ hang = turtle.Turtle()
 hang.color("Medium Turquoise")
 hang.pensize(6)
 hang.shape("classic")
+
 hangs = turtle.Turtle()
 hangs.color("Medium Turquoise")
 hangs.pensize(6)
 hangs.shape("classic")
 
+
 #turtle info for board
-def hangmanBoard():
+def hangBoard():
     hang.hideturtle()
-    hang.penup()
-    hang.back(100)
-    hang.pendown()
     hang.back(200)
     hang.forward(100)
     hang.left(90)
@@ -31,32 +31,40 @@ def hangmanBoard():
     hang.forward(100)
     hang.right(90)
     hang.forward(30)
+    hangs.penup()
+    hangs.left(90)
+    hangs.forward(220)
+    hangs.left(180)
+    hangs.pendown()
+hangBoard()
 #code for body
-def head():
+def man():
    hangs.right(90)
    hangs.circle(30)
    hangs.penup()
    hangs.left(90)
    hangs.forward(60)
-def body():
+   time.sleep(2)
+def manbody():
    hangs.pendown()
    hangs.forward(80)
    hangs.back(70)
-def leftarm():
+   time.sleep(2)
+def manleftarm():
    hangs.left(45)
    hangs.forward(50)
    hangs.back(50)
-def rightarm():
+def manrightarm():
    hangs.right(90)
    hangs.forward(50)
    hangs.back(50)
-def leftleg():
+def manleftleg():
    hangs.left(45)
    hangs.forward(70)
    hangs.left(45)
    hangs.forward(50)
    hangs.back(50)
-def rightleg():
+def manrightleg():
    hangs.right(90)
    hangs.forward(50)
    hangs.back(50)
@@ -137,10 +145,16 @@ while True:
         missedLetters = missedLetters + guess
 
         # Check if player has guessed too many times and lost
+<<<<<<< HEAD
         if len(missedLetters) == 6-1 :
             rightleg()
+=======
+        if len(missedLetters) == len(secretWord) - 1:
+>>>>>>> 0187725ad2c2670e80c39b660ae00da0dd565342
             displayBoard(missedLetters, correctLetters, secretWord)
+            man()
             print('You have run out of guesses!\nAfter ' + str(len(missedLetters)) + ' missed guesses and ' + str(len(correctLetters)) + ' correct guesses, the word was "' + secretWord + '"')
+<<<<<<< HEAD
         if len(missedLetters)==5-1:
             leftleg()
         if len(missedLetters)==4-1:
@@ -153,6 +167,23 @@ while True:
             head()
             gameIsDone = True
 
+=======
+        if len(missedLetters)==len(secretWord)-1:
+            manbody()
+        if len(missedLetters)==len(secretWord)-1:
+            manleftarm()
+        if len(missedLetters)==len(secretWord)-1:
+            manrightarm()
+        if len(missedLetters)==len(secretWord)-1:
+            manleftleg()
+        if len(missedLetters)==len(secretWord)-1:
+            manrightleg()
+            gameIsDone = True
+
+
+
+
+>>>>>>> 0187725ad2c2670e80c39b660ae00da0dd565342
     # Ask the player if they want to play again (but only if the game is done).
     if gameIsDone:
         if playAgain():
@@ -163,5 +194,4 @@ while True:
         else:
             break
 
-hangmanBoard()
 tkinter.mainloop()
