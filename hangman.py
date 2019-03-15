@@ -80,7 +80,7 @@ def manrightleg():
    hangs.back(50)
 
 #This is the word list
-words = 'jazz jazzy yewhaw dab wierd accommodate cemetery caribbean Arctic xylophone daiquiri'.split() #Split strings the words into a list
+words = 'jazz jazzy yewhaw dab wierd accommodate crackerjacks bedazzlement cemetery caribbean Arctic xylophone daiquiri abnormalties '.split() #Split strings the words into a list
 
 def getRandomWord(wordList):
 # This function returns a random string from the passed list of strings.
