@@ -145,19 +145,20 @@ while True:
         missedLetters = missedLetters + guess
 
         # Check if player has guessed too many times and lost
-        if len(missedLetters) == len(secretWord) - 1:
+        if len(missedLetters) == 7:
             displayBoard(missedLetters, correctLetters, secretWord)
-            man()
             print('You have run out of guesses!\nAfter ' + str(len(missedLetters)) + ' missed guesses and ' + str(len(correctLetters)) + ' correct guesses, the word was "' + secretWord + '"')
-        if len(missedLetters)==len(secretWord)-1:
+        if len(missedLetters)==2-1:
+            man()
+        if len(missedLetters)==3-1:
             manbody()
-        if len(missedLetters)==len(secretWord)-1:
+        if len(missedLetters)==4-1:
             manleftarm()
-        if len(missedLetters)==len(secretWord)-1:
+        if len(missedLetters)==5-1:
             manrightarm()
-        if len(missedLetters)==len(secretWord)-1:
+        if len(missedLetters)==6-1:
             manleftleg()
-        if len(missedLetters)==len(secretWord)-1:
+        if len(missedLetters)==7-1:
             manrightleg()
             gameIsDone = True
 
