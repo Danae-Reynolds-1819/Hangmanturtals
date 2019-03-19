@@ -124,7 +124,17 @@ def getGuess(alreadyGuessed):
 def playAgain():
     # This function returns True if the player wants to play again, otherwise it returns False.
     print('Do you want to play again? (yes or no)')
+    hangs.clear()
+    hangs.penup()
+    hangs.hideturtle()
+    hangs.home()
+    hangs.penup()
+    hangs.left(90)
+    hangs.forward(220)
+    hangs.left(180)
+    hangs.pendown()
     return input().lower().startswith('y')
+
 
 #Resets missed letters and the correct letters as well as the random word
 print('H A N G M A N')
