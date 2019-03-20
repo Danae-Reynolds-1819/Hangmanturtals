@@ -191,17 +191,17 @@ while True:
         # If one miss occurs, a body part will be drawn. Once all 6 body parts are done, game is done
         if len(missedLetters) == 7:
             displayBoard(missedLetters, correctLetters, secretWord)
-        if len(missedLetters) == 2-1:
+        if len(missedLetters) == 2-1: # This will go up tp the def to draw the head afer the first missed letter
             man()
-        if len(missedLetters) == 3-1:
+        if len(missedLetters) == 3-1: # Goes to the def to make the body after the second missed letter
             manbody()
-        if len(missedLetters) == 4-1:
+        if len(missedLetters) == 4-1: # Goes to the def to make the left arm after the third missed letter
             manleftarm()
-        if len(missedLetters) == 5-1:
+        if len(missedLetters) == 5-1: # Goes to the def to make the right arm after the fourth missed letter
             manrightarm()
-        if len(missedLetters) == 6-1:
+        if len(missedLetters) == 6-1: # Goes to the def to make the left leg afer the fifth missed letter
             manleftleg()
-        if len(missedLetters) == 7-1:
+        if len(missedLetters) == 7-1: # Goes to the def to make the right leg and ends the game ofter the sixth missed letter
             manrightleg()
             # Check if player has guessed too many times and lost
             print('You have run out of guesses!\nAfter ' + str(len(missedLetters)) + ' missed guesses and ' + str(len(correctLetters)) + ' correct guesses, the word was "' + secretWord + '"')
