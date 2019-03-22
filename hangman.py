@@ -96,7 +96,7 @@ def manrightleg():
 # This is the word list:
 
 
-words = 'jazz jazzy yewhaw dab wierd accommodate cemetery caribbean Arctic xylophone daiquiri watertemple zelda link kokiri'.split() #Split strings the words into a list
+words = 'jazz jazzy yewhaw dab wierd accommodate cemetery caribbean Arctic xylophone daiquiri watertemple zelda link kokiri is to so it if an'.split() #Split strings the words into a list
 
 
 def getRandomWord(wordList):
